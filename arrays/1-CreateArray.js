@@ -1,8 +1,8 @@
 const arr = [] //κενός
 const arr1 = [1, 2, 3, 4, 5] //και populate
 const arr2 = [1, 'Alice', 3.4, true]
-const sparseArr = [1, , 3] //sparse array 2 elements and length 3.
-const arr3 = [, , ,] // length 3 and 0 elements. 3 is undefined
+const sparseArr = [1, , 3] //sparse array. 2 elements, 1 undefined and length 3. sparseArr[1] = undefined
+const arr3 = [, , ,] // length 3 and 0 elements. 3 elements are undefined
 const arr4 = Array(2) //array of 2 elements
 const grid = [
   [1, 2],

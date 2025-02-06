@@ -1,7 +1,8 @@
+//splice changes the original array
 const arr = [1, 2, 3, 4, 5, 6, 7, 8]
 
 //Delete
-const arr2 = arr.splice(0, 4) //from index 0 delete 4 elements and return it to arr2
+const arr2 = arr.splice(0, 4) //from index 0 delete 4 elements and return the subarray to arr2
 
 console.log(arr2)
 console.log(arr)

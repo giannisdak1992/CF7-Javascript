@@ -13,6 +13,7 @@ const getIndexes = (arr, val) => {
   const indexes = []
 
   arr.forEach((v, index) => {
+    //forEach(value, index of each value)
     if (v === val) {
       indexes.push(index)
     }

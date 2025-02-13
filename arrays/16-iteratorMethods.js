@@ -11,8 +11,7 @@ let filtered = students.filter((student) => {
 
 console.log(filtered)
 
-let mapped = students.map((student) => 'Student: ' + student) //αντιστοιχίζουμε ένα στοιχείο σε κάποιο άλλο
-console.log(mapped)
+let mapped = students.map((student) => 'Student: ' + student) //αντιστοιχίζουμε ένα στοιχείο σε κάποιο άλλο. Μπορούμε να αλλάξουμε την τιμή σε κάτι άλλο
 
 const numbers = [1, 6, 9, 12]
 let sum = numbers.reduce((total, val) => total + val, 0) // total accumulates. total = total + val , second parameter is the initial value. total = 0

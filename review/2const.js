@@ -1,5 +1,5 @@
 /**
- * JavaScript uses a dynammic policy, no datatypes needed.
+ * JavaScript uses a dynamic policy, no datatypes needed.
  * Variables are camelCase
  * JS is case-sensitive (PI not the same to Pi and pI)
  * Avoid declaring with var.

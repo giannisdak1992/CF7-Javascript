@@ -16,7 +16,7 @@ if (Number.isNaN(NaN)) {
   console.log('False')
 }
 
-if (isNaN(Nan)) {
+if (isNaN()) {
   console.log('Is NaN')
 } else {
   console.log('Not is NaN')

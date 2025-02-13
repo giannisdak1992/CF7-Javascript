@@ -1,5 +1,5 @@
 const name = 'Ioannis'
-console.log('Hello, ' + name + '!')
+console.log(`Hello ${name}!`)
 
 const num1 = 5
 const num2 = 10

@@ -4,7 +4,7 @@ const users = [
   { id: 3, firstname: 'Costas', email: 'costas@aueb.gr', isActive: true },
 ]
 
-users.forEach((u) => console.log(u))
+users.forEach((u) => console.log(u.email))
 
 const emails = users.map((user) => user.email) //returns email at emails array
 console.log(emails)
@@ -26,7 +26,7 @@ const userIndex = users.findIndex((user) => user.email === 'alice@aueb.gr')
 
 console.log(user, userIndex)
 
-const isOutOfStock = cart.some((item) => item.stock === 0)
+const isOutOfStock = cart.some((item) => item.stock === 0) //at least one item to be in zero price
 console.log(isOutOfStock) //true
 const isAllOutOfStock = cart.every((item) => item.stock === 0)
 console.log(isAllOutOfStock) //false
@@ -43,6 +43,7 @@ const allTags = posts.flatMap((post) => post.tags)
 console.log(allTags)
 
 const fruits = ['Apples', 'Oranges']
-for (const [index, fruit] of cart.entries()) {
+for (const [index, fruit] of fruits.entries()) {
+  //entries() return an array with subbarys [[0, "Apples"], [1, 'Oranges]] and const [index, fruit] destructures it
   console.log(`Index: ${index}, Fruit: ${fruit}`)
 }

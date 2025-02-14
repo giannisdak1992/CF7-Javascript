@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=div, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="outer">
+      <p id="auebText"></p>
+    </div>
+    <script>
+      // const p = document.getElementById('auebText')
+      const p = document.querySelector('#auebText')
+      // p.textContent += ' Hello World!'
+      p.innerHTML = '<b>Hello</b>' //parse html tags
+    </script>
+  </body>
+</html>

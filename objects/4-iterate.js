@@ -4,8 +4,9 @@ const person = {
   city: 'Athens',
   isStudent: false,
 }
+// Object keys and Object values return an array
 
-const keys = Object.keys(person)
+const keys = Object.keys(person) // returns an array of keys
 keys.forEach((key) => console.log(`key: ${key}, value: ${person[key]}`))
 
 console.log(Object.values(person))

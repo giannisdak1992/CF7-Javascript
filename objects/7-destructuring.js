@@ -5,9 +5,9 @@ const person = {
   age: 25,
   city: 'Athens',
 }
-const { firstname, age, city } = person
+// const { firstname, age, city } = person
 
-console.log(firstname, age, city)
+// console.log(firstname, age, city)
 
 const { firstname: first, age: newAge, city: myCity = 'Toronto' } = person
 

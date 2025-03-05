@@ -18,7 +18,7 @@ function maxx(...rest) {
   return Math.max(...numbers) //here is spread. producer
 }
 
-console.log(sum(1, 2, 7, 9, 22))
+// console.log(sum(1, 2, 7, 9, 22))
 
 function greet(message, ...names) {
   console.log(message + ', ' + names.join(', '))

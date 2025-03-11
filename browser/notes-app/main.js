@@ -26,7 +26,7 @@ let notes = []
 let count = 0
 
 window.addEventListener('DOMContentLoaded', function () {
-  this.setInterval(() => printGRDate(), 1000)
+  this.setInterval(() => printGRDate(), 1000) //every 1000 miliseconds (1s) printGRDate is called
 
   this.document
     .querySelector('#addNoteBtn')
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function printGRDate() {
   const currentDate = new Date()
-  const day = currentDate.getDay()
+  const day = currentDate.getDay() // κυριακή - 0, δευτέρα -1...
   const date = currentDate.getDate()
   const month = currentDate.getMonth()
   const year = currentDate.getFullYear()
@@ -77,9 +77,9 @@ function printGRDate() {
  * @returns nothing if data.note is empty or null
  */
 function onInsertHandler(data) {
-  if (!data.note) return
-  insertNote(data)
-  reset()
+  if (!data.note) return // Αν η σημείωση είναι κενή, επιστρέφει χωρίς να κάνει τίποτα
+  insertNote(data) // Καλεί τη συνάρτηση για να εισάγει τη σημείωση
+  reset() // Καθαρίζει το πεδίο εισαγωγής
 }
 
 /**
@@ -87,9 +87,9 @@ function onInsertHandler(data) {
  * @param {Object} note
  */
 function insertNote(note) {
-  notes = [...notes, note]
-  count++
-  renderNotes()
+  notes = [...notes, note] // Προσθέτει τη σημείωση στη λίστα
+  count++ // Αυξάνει τον μετρητή
+  renderNotes() // Καλεί τη συνάρτηση για να ανανεώσει την προβολή των σημειώσεων
 }
 
 /*
@@ -102,7 +102,7 @@ function renderNotes() {
     .map(
       (note) => `<div id = '${
         'noteTemplate' + note.key
-      }' class = "flex justify-between items-center px-[10px] py-[2px] border-b border-black">
+      }' class = "flex justify-between items-center px-[10px] py-[2px] border-b border-black"> 
     
     <div id = "${'noteInfo' + note.key}" class = " flex items-center ">
       <input type = "checkbox" id = "${

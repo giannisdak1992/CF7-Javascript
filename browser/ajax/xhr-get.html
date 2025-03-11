@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>XHR Get</title>
   </head>
   <body>
     <h1>XMLHttpRequest GET Request</h1>
@@ -13,22 +13,24 @@
       function fetchOneObj() {
         const xhr = new XMLHttpRequest()
 
-        xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true)
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true) // 1. initialize API
 
         xhr.onreadystatechange = function () {
+          // 3. Validation
           if (xhr.status === 4) {
-            if (xhr.status === 200) {
-              handleResponse(JSON.parse(xhr.responseText))
+            if (xhr.status >= 200 && xhr.status < 300) {
+              handleResponse(JSON.parse(xhr.responseText)) //4. Parse JSON
             } else {
               showError(xhr.statusText)
             }
           }
         }
 
-        xhr.send()
+        xhr.send() //2. API CALL
       }
 
       function handleResponse(response) {
+        // 5. render
         document.getElementById(
           'responseText'
         ).innerHTML = `<b>Title</b>: ${response.title}

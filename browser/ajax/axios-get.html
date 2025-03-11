@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Axios Get</title>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>XMLHttpRequest GET Request</h1>
+    <h1>Axios GET Request</h1>
     <button type="button" onclick="fetchOneObj()">Fetch One Object</button>
     <p id="responseText"></p>
 
@@ -20,7 +20,7 @@
               'responseText'
             ).innerHTML = `<b>Title:</b> ${response.data.title}`
           })
-          .catch((error) => console.error('Error: ', error))
+          .catch((error) => console.error('Error: ', error)) // whatever is not between 200 - 299 comes here
       }
     </script>
   </body>
